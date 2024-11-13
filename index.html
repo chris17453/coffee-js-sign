@@ -103,6 +103,11 @@
         <!-- Display the image -->
         <img src="coffee-code.png" alt="Coffee Code Challenge">
 
+
+
+        <!-- Toggle Button and Solution section -->
+        <button id="toggle-button" class="toggle-button" onclick="toggleSolution()">SHOW ME THE SOLUTION</button>
+        <div id="solution">
         <!-- Code explanation -->
         <h2>JavaScript Code</h2>
         <div class="code-block">
@@ -128,18 +133,14 @@ console.log(barista.request(your_drink));
         </div>
 
 
-
-        <!-- Toggle Button and Solution section -->
-        <button id="toggle-button" class="toggle-button" onclick="toggleSolution()">SHOW ME THE SOLUTION</button>
-        <div id="solution">
-            <!-- Explanation section -->
+         <!-- Explanation section -->
             <h2>Explanation</h2>
             <ul>
                 <li><strong>reverse function:</strong> This function takes a string, splits it into an array, reverses it, and then joins it back into a string.</li>
                 <li><strong>barista object:</strong> This object holds parts of the "secret word" and a function to build the final message.</li>
                 <li><strong>Secret word:</strong> The concatenation of `str2` + `str3` + `str1` gives the word "encryption."</li>
             </ul>
-            <div id="solution" class="solution">
+            <div class="solution">
                 <p>When executed, the code returns: <strong>latte Secret word: encryption</strong></p>
             </div>
         </div>
