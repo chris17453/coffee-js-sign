@@ -58,7 +58,8 @@
             margin-bottom: 5px;
             border-radius: 5px;
         }
-        .result {
+        .solution {
+            display: none;
             background-color: #ffecb3;
             padding: 15px;
             border-radius: 8px;
@@ -66,7 +67,33 @@
             font-weight: bold;
             color: #2e2e2e;
         }
+        .toggle-button {
+            background-color: #ff6f61;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 20px;
+        }
+        .toggle-button:hover {
+            background-color: #ff543e;
+        }
     </style>
+    <script>
+        function toggleSolution() {
+            var solution = document.getElementById("solution");
+            var button = document.getElementById("toggle-button");
+            if (solution.style.display === "none") {
+                solution.style.display = "block";
+                button.innerText = "HIDE THE SOLUTION";
+            } else {
+                solution.style.display = "none";
+                button.innerText = "SHOW ME THE SOLUTION";
+            }
+        }
+    </script>
 </head>
 <body>
     <h1>Coffee Code Challenge ☕</h1>
@@ -108,9 +135,9 @@ console.log(barista.request(your_drink));
             <li><strong>Secret word:</strong> The concatenation of `str2` + `str3` + `str1` gives the word "encryption."</li>
         </ul>
 
-        <!-- Result section -->
-        <h2>Result</h2>
-        <div class="result">
+        <!-- Toggle Button and Solution section -->
+        <button id="toggle-button" class="toggle-button" onclick="toggleSolution()">SHOW ME THE SOLUTION</button>
+        <div id="solution" class="solution">
             When executed, the code returns: <strong>latte Secret word: encryption</strong>
         </div>
     </div>
